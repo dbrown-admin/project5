@@ -11,19 +11,17 @@ app = Flask(__name__)
 def hello():
     return "Hello, Welcome to group project #5."
 
-''' example
-@app.route('/md5/<string>')
+@app.route('/md5/hashtext')
 def json_response():
     resp = Response('{ "foo": "bar", "baz": "bat" }')
     resp.headers['Content-Type'] = 'application/json'
     return resp
-'''
 
-@app.route('/md5/<string>')
+'''@app.route('/md5/<string>')
 def md5_response():
     resp = hashlib.md5({string})
     return resp
-
+'''
 @app.route('/factoral/<int>')
 def factoral_response():
     resp = math.factoral({int})
